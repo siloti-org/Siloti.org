@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+/* ICONS */ 
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 48;
+  vertical-align: bottom;
+  padding-bottom: 0.2em; 
+
+}
+
+
+.logo {
+    width: 4em;
+    height: auto; 
+    margin: auto;
+}
+
+
+/* NAV BUTTON */
+.nav-button {
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  padding-bottom: 0;
+  padding-top: 1em;
+}
+
+/* FLOATING BUTTON */
+    .floating-button {
+      position: fixed;
+      bottom: 20px; /* Adjust as needed */
+      right: 20px; /* Adjust as needed */
+      z-index: 9999; /* Ensures the button appears above other elements */
+      padding: 2em;
+      margin: 2em;
+      width: 6em;
+      height: 6em;
+      background-color: transparent;
+      border: none;
+      display: none; /* Initially hidden */
+    }
+
+.floating-top {
+     position: fixed;
+      top: 20px; /* Adjust as needed */
+      left: 20px; /* Adjust as needed */
+      z-index: 9999; /* Ensures the button appears above other elements */
+      width: 6em;
+      height: 6em;
+      background-color: transparent;
+      border: none;
+}
+
+/* NAV IMPLEMENTATION FROM ARCHITECTURE */
+
+/* Dropdown Button */
+.navhover {
+  border: none;
+  background-color: transparent;
+  color: black;
+  background-image: url('spectacle-hover.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 35em;
+  height: 5em;
+  max-width: 80%;
+  
+  position: absolute;
+  transform: translate(-50%,-55%);
+  z-index: 2;
+  }
+
+}
+/* The container <div> - needed to position the dropdown content */
+.nav {
+  display:inline-block;
+  margin-top: 2em; 
+  margin-bottom: 0;
+  padding-bottom: 0; 
+  background: linear-gradient(180deg, black 50%, white 50%);
+  position: relative;
+}
+/* Dropdown Content (Hidden by Default) */
+.navlist {
+  display: none;
+  background-color:white; 
+  min-width: 160px;
+  width: fit-content;
+  margin: 0 auto;
+  z-index: 1;
+  padding-top: 2em;
+}
+/* Links inside the dropdown */
+.navlist a {
+  color: black;
+  /*color: #d6d6d6; */
+  font-size: 1.1em;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  line-height: 1.6em; 
+  text-transform: uppercase;
+  display: block;
+  padding: 0 0.5em;
+}
+.navlist a:visited {
+  color: black;
+}
+.navlist a:link {
+  color: black;
+}
+/* Change color of dropdown links on hover */
+.navlist a:hover {
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+}
+/* Show the dropdown menu on hover */
+.nav:hover .navlist {display: block;}
+
+
+
+
+/* DEVELOPING A STANDARD PAGE LOOK */
+
+#citations p {
+  text-align:left;
+  text-indent: -36px;
+  padding-left: 36px;
+}
+
+
+.intro-statement { /* currently unused. same as masthead-subtitle but for color?*/ 
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-top: 2em;
+  margin: 0 auto;
+}
+
+#mega {
+  font-size: 1.6em;
+}
+
+#pre-title {
+  font-weight: 500; 
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size:0.7em;
+}
+
+#pre-title-large {
+  font-weight: 500; 
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+#post-title {
+ font-size: 0.6em;
+  letter-spacing: 1px;
+  padding: 0; 
+  margin: 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+#clear-margin-padding {
+  padding: 0;
+  margin: 0 auto;
+}
+
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.8em;
+}
+.section-header-no-line {
+  letter-spacing: 4px;
+  text-transform: uppercase; 
+  font-weight: bold;
+  font-size: 1.6em;
+  padding-top: 2em;
+}
+
+
+h1 {
+  font-size: 1.4em;
+  padding: 0;
+  margin: 0;
+  padding-top: 2em;
+}
+
+#research-content > h1 {
+  padding-bottom: 2em;
+}
+#primary-content > h1 {
+padding-bottom: 2em;
+}
+
+h2 { /* subtitle */
+  font-size: 1em;
+  letter-spacing: 1px;
+  padding: 0; 
+  margin: 0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+h4 { /*strong center*/
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+}
+
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  padding: 0 0.5em;
+}
+
+.seperator {
+  content: "";
+  background-color: black;
+  border-radius: 5px;
+  height: 5px;
+  width: 240px;
+}
+
+/* RESEARCH STYLING */
+
+code {
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  padding: 0 0.5em;
+  font-family: 'Vollkorn', serif;
+}
+
+h4 {
+  margin: 0 auto;
+  padding: 0;  
+}
+
+h3 {
+  font-size: 1.4em;
+  margin: 0 auto;
+  max-width: 575px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+blockquote {
+  color: #849290;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 0.5em 1em;
+  margin: 1em auto 0;
+  max-width: 575px;
+}
+
+blockquote p {
+  padding: 0;
+}
+
+blockquote a{
+  color:#c0c0c0;
+}
+
+
+#research-content .seperator {
+  margin-bottom: 3em;
+}
+
+#primary-content > .seperator {
+  margin-bottom: 3em;
+}
+
+/* FOUNDATION STYLING */
+
+body {
+  font-family: 'Vollkorn', serif;
+  text-align: justify;
+  background-color: #0b0100;
+  margin: 0 auto;
+  padding: 0;
+}
+
+p {
+  text-align: justify;
+  margin: 0 auto;
+  /*display: inline-block;*/
+  max-width: 575px;
+  padding-top: 1em;
+}
+
+.drop-cap {
+  font-size: 2.5em;
+  color: white;
+  background-color: black;
+  border-radius: 20%;
+  padding: 11px 10px 6px;
+  float: left;
+  margin-right: 0.1em;
+  line-height: 0.75;
+}
+
+
+/* MASTHEAD STYLING */
+
+header {
+  border: none;
+}
+
+.masthead-title {
+  letter-spacing: 36px;
+  font-size: 2.4em;
+  font-weight: 700;
+  padding-top: 1em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  text-align: center;
+}
+
+.masthead-subtitle {
+  font-weight: bold; 
+  font-size: 1.2em;
+  padding-bottom: 0.5em;
+}
+
+img.siloti-sig {
+  display: block;
+  margin: 0 auto;
+  max-width: 500px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+img.spectacle-search {
+  display: block;
+  margin: 0 auto;
+  max-width: 500px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+}
+
+
+/* NAV RIBBON STYLING */
+
+img.circle {
+  width: 18%;
+  /*width: 180px;
+  max-width: 180px;*/
+}
+
+.ribbon {
+  margin: 0 auto;
+}
+.ribbon-backing {
+  background: linear-gradient(180deg, black 23%, white 23%);
+}
+
+.search-ribbon-backing {
+  background: linear-gradient(180deg, black 50%, white 50%);
+}
+
+/* SECTION STYLING */
+
+section {
+  background-color: white;
+  color: black;
+  padding: 0; 
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+  max-width: 100%;
+  border: 2px solid white;
+}
+
+.section-black {
+  background-color:black;
+  color:white;
+  border: 2px solid black;
+}
+
+.section-header {
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase; 
+  font-weight: bold;
+  position: relative;
+  font-size: 1.6em;
+  padding-top: 2em;
+}
+
+.section-header::after {
+  content: "";
+  background-color: black;
+  border-radius: 5px;
+  height: 5px;
+  width: 240px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.seperator {
+  content: "";
+  display: block;
+  background-color: black;
+  height: 5px;
+  width: 240px;
+  margin: 10px auto;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  margin-top: 3em;
+}
+
+/* CONCERT PROGRAM STYLES */
+
+.concert-title {
+  padding-top: 2em;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+
+.concert-subtitle {
+  text-align: center;
+  padding-bottom: 2em;
+  font-size: 1.1em;
+}
+
+.concert-series {
+  margin-top: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+    
+.historical-date {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.upcoming-header { /* currently not implemented */
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 1em;
+}
+
+
+/* VISUAL LINKS */
+
+.link-bundle {
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+.link-bundle a {
+  margin-left: 8px;
+  margin-right: 8px;
+  background-color: transparent;
+}
+
+a.spotify-link {
+  background-image: url("spotify-logo.svg");
+  display: inline-block;
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+  opacity: 8%;
+  background-color: transparent;
+}
+
+a.youtube-link {
+  background-image: url("youtube-logo.svg");
+  display: inline-block;
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+  opacity: 8%;
+  background-color: transparent;
+}
+a.icon-link {
+  display: inline-block;
+  padding: 1em;
+}
+
+img.icon {
+  height: 60px;
+  padding: 0;
+}
+
+a.icon-link span  {
+  display: inline-block;
+  font-size: 2.9em;
+}
+
+.icon-link .label {
+  display: none;
+  font-size: 1em;
+  padding-bottom: 0.2em;
+}
+
+.icon-link:hover .label {
+  display: block;
+  color:white;
+}
+
+
+.icon-link:hover .svg-path {
+  fill: white;
+}
+
+
+#black {
+  opacity: 100%;
+  color: black; /* so this can be used for fonts too */
+  }
+
+#grey {
+  opacity: 8%;
+}
+
+
+#grey-black {
+  opacity: 8%;
+}
+
+#grey-black :hover {
+  opacity:100%;
+}
+
+#align-top {
+  text-align:top;
+}
+
+
+/* PROGRAM TABLE STYLING */
+
+.program-table table {
+  width: 100%;
+  max-width: 575px;
+  border-collapse: collapse;
+  margin: 0 auto;
+  line-height: 1.5;
+  text-align: left;
+  vertical-align: top;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.program-table th,
+td {
+  padding: 10px;
+  border: none;
+  max-width: 22px;
+}
+
+.composition-note {
+  font-style: italic;
+  font-weight: 400;
+  vertical-align: top;
+}
+
+.performer {
+  font-style: italic;
+  font-weight: 400;
+  vertical-align: top;
+}
+
+.performer-note { /*updated for center*/
+  font-style: italic;
+  font-weight: 400;
+  vertical-align: top;
+  max-width: 575px;
+  margin: 0 auto;
+  padding: 0.7em 10px;
+}
+
+.program-table th:first-child,
+td:first-child {
+  text-align: left;
+  vertical-align: top;
+}
+
+.program-table th:last-child,
+td:last-child {
+  text-align: right;
+  vertical-align: top;
+}
+
+.program-table th {
+  background-color: transparent;
+  font-weight: normal;
+  vertical-align: top;
+}
+
+.program-table tr:nth-child(even) {
+  background-color: transparent;
+  vertical-align: top;
+}
+
+
+
+/* MECHANICS */
+
+/* small screens */
+@media only screen and (max-width: 660px) {
+.ribbon {
+    max-width: 90%;
+  }
+.masthead-title {
+    letter-spacing: 16px;
+    font-size: 1.8em;
+    font-weight: 800;
+}
+.masthead-subtitle {
+  font-size: 1em;
+}
+}
+
+/* large screens */
+@media only screen and (min-width: 660px) {
+.ribbon {
+    max-width: 70%;
+  }
+}

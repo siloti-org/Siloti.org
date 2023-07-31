@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>siloti.org</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="looks.css">
+
+
+  <script>
+
+    fetch('research-data-recollections.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('research-data-recollections').innerHTML = data;
+      })
+      .catch(error => console.error(error));
+
+    fetch('research-data.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('research-data').innerHTML = data;
+      })
+      .catch(error => console.error(error));
+
+  </script>
+
+</head>
+
+<body>
+
+  <!-- MASTHEAD -->
+  <header id="masthead">
+  </header>
+  <script>
+    fetch('masthead-minimal.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('masthead').innerHTML = data;
+      })
+      .catch(error => console.error(error));
+  </script>
+
+
+  <section>
+    <button id="floatingButton" class="floating-button"><a href="#image-banner" class="icon-link"><span class="material-symbols-rounded" style="font-size: 3em;">expand_circle_up</span></a></button>
+
+    <div class="section-header" id="research-landing"><span id="pre-title">Sources & </span><br>Scholarship</div>
+    <br>
+    <p><b><span class="drop-cap">S</span>cholarship</b> on the life and work of Alexander Siloti is rapidly expanding. In Russia and beyond, musical scholars are more and more coming to recognize Siloti's role in ushering in a new musical era. The following bibliography collects Siloti primary sources, recollections, and scholarship. <b>Siloti Symposiums</b> create an opportunity to engage, discuss, and support new research into Siloti's musical art.</p>
+
+    <br>
+    
+    <a href="primary-sources.html">Primary Sources</a><br>
+    <a href="recollections.html">Recollections</a><br>
+    <a href="research.html">Research</a><br>
+    <a href="#symposiums">Symposiums</a><br>
+    <a href="#curators">Curators</a><br>
+
+    <div class="seperator"></div>
+  </section>
+
+  <section id="research-content">
+
+
+    <h1 id="symposiums"><span id="pre-title">SILOTI</span><br>SYMPOSIUMS</h1>
+    <p><b><span class="drop-cap">S</span>iloti Symposiums</b> are an opportunity for scholars to share and explore research findings around Siloti’s context and compositional work.</p>
+       <br><br>
+
+    <div style="text-align:center;padding-bottom:2em;">
+  <a href="mailto:siloti.org@gmail.com?subject=Siloti.org,%20Symposium%20Interest%20" class="icon-link"><span class="label">Join the Watchlist</span><span class="material-symbols-rounded">mark_email_read</span></a>
+<a href="mailto:siloti.org@gmail.com?subject=Siloti.org,%20Symposium%20Topic%20Proposal%20" class="icon-link"><span class="label">Propose a Topic</span><span class="material-symbols-rounded">attach_email</span></a>
+  </div>
+    
+    <div class="seperator"></div>
+
+    <h1 id="curators"><span id="pre-title">siloti.org</span><br>CURATORS</h1>
+
+    <p><b><span class="drop-cap">S</span>iloti.org curators</b> strive to resurface stories and enable access to materials, manuscripts, and sounds that illuminate Siloti's musical art towards its rediscovery and application today.</p>
+    <br><br>
+    <div style="text-align:center;padding-bottom:2em;">
+  <a href="mailto:siloti.org@gmail.com?subject=Siloti.org,%20Contact%20a%20Curator" class="icon-link"><span class="label">Contact a Curator</span><span class="material-symbols-rounded">contact_mail</span></a>
+  </div>
+  
+  
+  
+  
+  <!--END TAGS-->
+<img src="siloti-logo-ink.png" class="logo" style="padding-top: 6em; padding-bottom: 4em;">
+</section>
+
+  <script>
+    var targetSection = document.getElementById("research-content");
+    var floatingButton = document.getElementById("floatingButton");
+
+    window.onscroll = function () {
+      if (isScrolledIntoView(targetSection)) {
+        floatingButton.style.display = "block"; // Show the button
+      } else {
+        floatingButton.style.display = "none"; // Hide the button
+      }
+    };
+
+    function isScrolledIntoView(element) {
+      var rect = element.getBoundingClientRect();
+      var elemTop = rect.top;
+      var elemBottom = rect.bottom;
+
+      // Partially visible elements count as in view
+      var isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+      return isVisible;
+    }
+  </script>
+</body>
+</html>

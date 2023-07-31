@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>siloti.org</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="looks.css">
+</head>
+
+<body>
+  
+<!-- MASTHEAD -->
+<header id="masthead-liszt"></header>
+  
+<script>
+    fetch('masthead-liszt.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('masthead-liszt').innerHTML = data;
+      })
+      .catch(error => console.error(error));
+</script>
+
+<section>
+  <br><br>
+<div class="title"><span id="pre-title">Alexander Siloti</span>
+  <br>My Memories of Liszt<br>
+  <span id="post-title">Siloti.org Edition 2023</span>
+</div>
+<br>
+<p><b><span class="drop-cap">A</span>lexander Siloti&#39;s</b> <i>Memories of Liszt</i> recounts an essential time in Siloti’s artistic journey — one that solidified his foundations and forged a vision for the pathway ahead.</p>
+
+<p>Written in 1911 amid a pinnacle Siloti Concert season, Siloti&#39;s <i>Memories</i> retell the origin of his artistic mission. In Russia, Liszt saw a nation poised to lead the next era in music. In Siloti, Liszt found their leader. By 1911, Siloti Concerts (1903-1917) at Mariinsky Theater (and other St. Petersburg locations) were launching new composers and unveiling a myriad of world premieres amidst each broad and encompassing concert season. Over the next decade, Siloti would go further along the path Liszt foreshadowed — sustaining the musical soul of the peoples amid war and a changing Russia through weekly free concerts at the Hall of the City Duma in Tauride Palace, St. Petersburg (1915-1917).</p>
+
+<p>In Siloti’s <i>Memories</i>, the philosophy and character of Liszt and Siloti combine — showing us a humility to look beyond individual ambition and arrogance; a commitment to uplift people, artists, and the art of music; and a freedom and creative confidence to guide music forward.</p>
+
+<p>Curated from <i>My Memories of Liszt</i> as told by Alexander Siloti to Sophie Satin, with edits by Oxana and Kyriena Siloti (translated by Methven Simpson, Limited, 1910). Expanded endnotes and additional illustrations draw from Oxana Siloti’s <i>Album of Pictures</i>. Accompanimental playlists complement the narrative with renditions of the works mentioned.</p>
+
+<br>
+<b>Book formats</b>
+
+
+<div style="text-align:center;padding-bottom:2em;">
+  <a href="https://drive.google.com/file/d/1GbGYllC4-2E16482r6nPKIvB4wyNrTnY/view?usp=sharing" class="icon-link"><span class="material-symbols-rounded">aod</span><span class="label">ebook</span></a>
+  
+  <a href="kindle" class="icon-link"><span class="material-symbols-rounded">menu_book</span><span class="label">hardcover</span></a>
+  <a href="audiobook" class="icon-link" id="grey"><span class="material-symbols-rounded">video_library</span><span class="label">audiobook<br>(future release)</span></a>
+</div>
+  
+<b>Accompanimental playlists</b>
+
+  <div class="link-bundle"><a href="https://youtube.com/playlist?list=PL_0PjGQ-yuJo1pcPyWHNFhGOuiVNapygG" class="youtube-link" id="black"></a><a href="https://open.spotify.com/playlist/3ar81lV6P2ZTIfAKP3aocz?si=wqA99CTLS8q2q93tUtmMww" class="spotify-link" id="black"></a></div>
+
+
+<br>
+<img src="memories-liszt-showcase.jpeg" style="margin: auto; width: 100%; border-radius:20px; max-width: 800px;"> 
+<br><br>
+      <img src="siloti-logo-ink.png" class="logo" style="padding-top: 6em; padding-bottom: 4em;">
+  <br><br>
+</section>
+</body>
+</html>

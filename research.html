@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>siloti.org</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="looks.css">
+</head>
+
+<body>
+
+  <section>
+    <button id="floatingButton" class="floating-button"><a href="#research-header" class="icon-link"><span class="material-symbols-rounded" style="font-size: 3em;">expand_circle_up</span></a></button>
+
+    <button class="floating-top"><a href="scholarship.html" class="icon-link"><span class="material-symbols-rounded" style="font-size: 3em;">arrow_circle_left</span></a></button>
+
+    <div class="section-header" id="research-header"><span id="pre-title">SILOTI</span><br>RESEARCH</div>
+    <br>
+    
+    <p style="padding-bottom: 2em;"><b><span class="drop-cap">A</span>cademic</b> research and biographical publications explore Siloti's impact, from artistic and cultural contributions to pedagogy and composition insights. This timeline curates a chronological overview. Abbreviated header citations are linked to full-text sources where available.</p>
+
+    <a href="#research-data">Linked Full-Text</a><br>
+    <a href="#citations">Citation-Only</a>
+
+  <div id="research-content">
+  <div class="seperator"></div>
+  <div id="research-data"></div>
+  <div class="seperator"></div>
+  <h1 id="citations">CITATION ONLY</h1><br><br>
+  <div id="citation-data"></div>
+  </div>
+    <blockquote style="margin-top:2em;">
+      <p style="text-align:center;padding-top:1em;"><b>Curation is ongoing</b><br>Suggest additional resources at the link below</p>
+  <a href="mailto:siloti.org@gmail.com?subject=Siloti.org,%20Suggest%20a%20Resource%20" class="icon-link" style="opacity:40%;"><span class="label"></span><span class="material-symbols-rounded">mark_as_unread</span><span class="label">suggest a resource</span></a>
+    </blockquote>
+
+<img src="siloti-logo-ink.png" class="logo" style="padding-top: 6em; padding-bottom: 4em;">
+
+
+    
+  
+  </section>
+
+   <script>
+    fetch('data-research.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('research-data').innerHTML = data;
+      })
+      .catch(error => console.error(error));
+  </script>
+
+  <script>
+    fetch('data-research-citations.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('citation-data').innerHTML = data;
+      })
+      .catch(error => console.error(error));
+  </script>
+  
+  
+  <script>
+    var targetSection = document.getElementById("research-content");
+    var floatingButton = document.getElementById("floatingButton");
+
+    window.onscroll = function () {
+      if (isScrolledIntoView(targetSection)) {
+        floatingButton.style.display = "block"; // Show the button
+      } else {
+        floatingButton.style.display = "none"; // Hide the button
+      }
+    };
+
+    function isScrolledIntoView(element) {
+      var rect = element.getBoundingClientRect();
+      var elemTop = rect.top;
+      var elemBottom = rect.bottom;
+
+      // Partially visible elements count as in view
+      var isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+      return isVisible;
+    }
+  </script>
+
+
+</body>
+
+</html>
