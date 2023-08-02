@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>siloti.org</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="looks.css">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+</head>
+
+<body>
+
+  <!-- MASTHEAD -->
+  <header id="masthead">
+  </header>
+  <script>
+    fetch('masthead-concerts.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('masthead').innerHTML = data;
+      })
+      .catch(error => console.error(error));
+  </script>
+
+  
+  <!-- INTRO -->
+  <section>
+<button id="floatingButton" class="floating-button"><a href="#navlink" class="icon-link"><span class="material-symbols-rounded" style="font-size: 3em;">expand_circle_up</span></a></button>
+
+    <br><br>
+    <p><b><span class="drop-cap">A</span>lexander Ilyich Siloti</b> led musicians to inspire and sustain the Russian
+      people through a difficult era of wars and political transition. Siloti’s St. Petersburg Concerts (1903-1917) and
+      Duma Hall People’s Free Concerts (1915-1917) crafted music for the Russian people at the pinnacle of world musical
+      art. Siloti’s unbridled musical clarity, moral character, pianistic expression, and heart for people fused
+      connections across musical artists and audiences.</p>
+    
+    <!-- WORKSPACE -->
+    <div style="display:none;">
+      <br>
+      <a href="liszt-resources-tidy.html"><img src="icon-flowsheet.svg" class="icon"></a>
+      <img src="favicon.svg" width="10%">
+    </div>
+
+    <div id="concert-header" style="height:2em;">     </div>
+    
+    <!-- CONCERTS -->
+    <img src="siloti-logo-ink.png" class="logo">
+    <div class="section-header" style="padding-top:0.2em">SILOTI CONCERTS</div>
+    <div id="concert-info"></div>
+
+    <img src="siloti-logo-ink.png" class="logo" style="padding-top: 6em; padding-bottom: 4em;">
+  </section>
+
+  <script>
+    // Use fetch to load the content of the file
+    fetch('data-siloti-concerts-format-20230426.html')
+      .then(response => response.text())
+      .then(data => {
+        // Use the data to set the innerHTML of your div element
+        document.getElementById('concert-info').innerHTML = data;
+      })
+      .catch(error => console.error(error));
+  </script>
+
+<script>
+    var targetSection = document.getElementById("concert-info");
+    var floatingButton = document.getElementById("floatingButton");
+
+    window.onscroll = function () {
+      if (isScrolledIntoView(targetSection)) {
+        floatingButton.style.display = "block"; // Show the button
+      } else {
+        floatingButton.style.display = "none"; // Hide the button
+      }
+    };
+
+    function isScrolledIntoView(element) {
+      var rect = element.getBoundingClientRect();
+      var elemTop = rect.top;
+      var elemBottom = rect.bottom;
+
+      // Partially visible elements count as in view
+      var isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+      return isVisible;
+    }
+  </script>
+</body>
+
+</html>
